@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateBillActivity"
+    android:background="@drawable/yellow2"> <!-- Replace with your background -->
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@android:color/white"
+            android:padding="24dp"
+            android:elevation="4dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:clipToOutline="true"
+            android:layout_gravity="center"
+            android:backgroundTintMode="src_in">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Bill"
+                android:textSize="26sp"
+                android:textColor="#D9822B"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Month Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Month:"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinnerMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Age Group -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Age Group:"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioAdult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adult (18-59)" />
+
+                <RadioButton
+                    android:id="@+id/radioSenior"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Senior (60+)" />
+
+            </RadioGroup>
+
+            <!-- Units -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Electricity Units (kWh):"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editUnits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Enter units"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Rebate -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rebate (%):"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editRebate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="Enter rebate (e.g., 5)"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Calculate Button -->
+            <Button
+                android:id="@+id/buttonCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:backgroundTint="#F7A541"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Output -->
+            <TextView
+                android:id="@+id/textTotalCharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Charge: RM 0.00"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/textFinalCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Final Cost after Rebate: RM 0.00"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="24dp"
+                android:maxLines="3"
+                android:ellipsize="none"
+                />
+
+
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Information"
+                android:backgroundTint="#2E7D32"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

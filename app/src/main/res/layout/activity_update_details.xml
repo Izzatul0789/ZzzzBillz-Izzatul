@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateDetailsActivity"
+    android:background="@drawable/yellow2">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@android:color/white"
+            android:padding="24dp"
+            android:elevation="4dp"
+            android:layout_margin="16dp"
+            android:clipToOutline="true">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Bill"
+                android:textSize="26sp"
+                android:textColor="#D9822B"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Month Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Month:"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Month"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:background="@android:color/darker_gray"
+                android:textColor="@android:color/white" />
+
+            <!-- Units -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Electricity Units (kWh):"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editUnits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Enter units"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Rebate -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rebate (%):"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editRebate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="Enter rebate (e.g., 5)"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Calculate Button -->
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Output -->
+            <TextView
+                android:id="@+id/textTotalCharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Charge: RM 0.00"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/textFinalCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Final Cost after Rebate: RM 0.00"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="24dp"
+                android:maxLines="3"
+                android:ellipsize="none" />
+
+            <!-- Update Button -->
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2E7D32"
+                android:text="Update Information"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
