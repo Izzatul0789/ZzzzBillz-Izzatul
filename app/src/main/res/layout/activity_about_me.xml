@@ -100,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
-                    android:text="I hereby declare that this project is my own work, except for summaries and quotations which have been duly acknowledged. This submission is made in accordance with the requirements of the course and has not been submitted for any other academic purpose."
+                    android:text="This submission is made in accordance with the requirements of the course and has not been submitted for any other academic purpose."
                     android:textSize="16sp"
                     android:textColor="#000000" />
 
@@ -108,7 +108,7 @@
                     android:id="@+id/githubLink"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="GitHub Link: https://github.com/yourusername/yourrepository"
+                    android:text="GitHub Link: https://github.com/Izzatul0789/ZzzzBillz-Izzatul"
                     android:autoLink="web"
                     android:textColor="#000000"
                     android:textStyle="bold"
